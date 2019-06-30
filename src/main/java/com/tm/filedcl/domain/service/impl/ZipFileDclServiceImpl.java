@@ -19,11 +19,15 @@ import org.springframework.stereotype.Service;
 public class ZipFileDclServiceImpl extends ServiceImpl<ZipFileDclMapper, ZipFileDcl> implements ZipFileDclService {
     @Autowired
     private ZipFileDclMapper zipFileDclMapper;
-    @Autowired
-    private ZipFileDclService zipFileDclService;
+
 
     @Override
     public ZipFileDcl getZipFileDclById(String id) {
-        return zipFileDclService.getZipFileDclById(id);
+        return zipFileDclMapper.getZipFileDclById(id);
+    }
+
+    @Override
+    public String select1(String id) {
+        return zipFileDclMapper.select1(id);
     }
 }

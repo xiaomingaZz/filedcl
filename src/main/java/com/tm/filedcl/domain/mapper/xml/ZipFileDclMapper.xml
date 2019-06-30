@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="domain.mapper.ZipFileDclMapper">
+<mapper namespace="com.tm.filedcl.domain.mapper.ZipFileDclMapper">
 
 	<!-- 开启二级缓存 -->
-	<cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+	<!--<cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>-->
 
 	<!-- 通用查询映射结果 -->
 	<resultMap id="BaseResultMap" type="com.tm.filedcl.domain.entity.ZipFileDcl">
@@ -18,8 +18,15 @@
 		<result column="tabmc" property="tabmc" />
 	</resultMap>
 
-	<select id="getZipFileDclById" parameterType="java.lang.Integer" resultType="com.tm.filedcl.domain.entity.ZipFileDcl">
+	<select id="getZipFileDclById" parameterType="java.lang.String" resultType="com.tm.filedcl.domain.entity.ZipFileDcl">
 		select * from zip_file_dcl where id = #{id}
 	</select>
 
+	<!--<select id="selectById" parameterType="java.lang.String" resultType="com.tm.filedcl.domain.entity.ZipFileDcl">-->
+		<!--select * from zip_file_dcl where id = #{id}-->
+	<!--</select>-->
+
+	<select id="selectById" parameterType="java.lang.String" resultType="com.tm.filedcl.domain.entity.ZipFileDcl">
+		select * from zip_file_dcl where id = #{id}
+	</select>
 </mapper>

@@ -15,4 +15,6 @@ import java.util.List;
  * @since 2019-06-28
  */
 public interface ZipFileDclMapper extends BaseMapper<ZipFileDcl> {
+    ZipFileDcl getZipFileDclById(@Param("id")String id);
+    String select1(@Param("id")String id);
 }

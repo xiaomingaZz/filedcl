@@ -3,6 +3,6 @@
 <mapper namespace="domain.mapper.ZipFileIn20190628Mapper">
 
 	<!-- 开启二级缓存 -->
-	<cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+	<!--<cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>-->
 
 </mapper>

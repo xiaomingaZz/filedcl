@@ -15,5 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @since 2019-06-28
  */
 public interface ZipFileDclService extends IService<ZipFileDcl> {
+    ZipFileDcl getZipFileDclById(@Param("id")String id);
 
+    String select1(@Param("id")String id);
 }
